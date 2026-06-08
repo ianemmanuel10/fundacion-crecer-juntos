@@ -83,7 +83,6 @@ img {
 .hero {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 95, 45, 0.85)), to(rgba(44, 95, 45, 0.85))), url("../img/hero.jpg") center/cover no-repeat;
   background: linear-gradient(rgba(44, 95, 45, 0.85), rgba(44, 95, 45, 0.85)), url("../img/hero.jpg") center/cover no-repeat;
-  height: 85vh;
 }
 .hero__titulo {
   font-size: 3.2rem;
