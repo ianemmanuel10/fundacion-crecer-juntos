@@ -1,0 +1,62 @@
+// --------------------------
+// ✅ MIXIN: Reutilizamos código
+// --------------------------
+@mixin sombra-suave {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@mixin borde-redondo {
+    border-radius: $radio-borde;
+}
+
+// --------------------------
+// ✅ ESTILO BASE PARA EXTEND
+// --------------------------
+.tarjeta-base {
+    background-color: $color-blanco;
+    padding: $espacio-medio;
+    @include sombra-suave;
+    @include borde-redondo;
+}
+
+// --------------------------
+// ✅ EXTEND: Heredamos estilos
+// --------------------------
+.tarjeta {
+    @extend .tarjeta-base;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+}
+
+// Hero
+.hero {
+    background: linear-gradient(rgba(44, 95, 45, 0.85), rgba(44, 95, 45, 0.85)), url('../img/hero.jpg') center/cover no-repeat;
+    height: 85vh;
+
+    &__titulo {
+        font-size: $tamano-titulo;
+        margin-bottom: $espacio-medio;
+    }
+
+    &__boton {
+        background-color: $color-secundario;
+        border: none;
+        padding: 0.8rem 2rem;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken($color-secundario, 10%);
+        }
+    }
+}
+
+// Footer
+.footer {
+    background-color: $color-oscuro;
+    margin-top: $espacio-grande;
+}

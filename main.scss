@@ -1,0 +1,11 @@
+// Importamos todos los parciales en orden
+@import 'variables';
+@import 'reset';
+@import 'nav';
+@import 'componentes';
+@import 'animaciones';
+@import 'responsive';
+
+// Sobreescribimos variables de Bootstrap si fuera necesario
+$primary: $color-primario;
+$secondary: $color-secundario;
